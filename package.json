@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev src/app/server.ts"
+    "dev": "ts-node-dev src/app/server.ts",
+    "start": "ts-node-dev src/app/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "@prisma/client": "^4.3.1",
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "heroku": "^7.63.4",
     "prisma": "^4.3.1"
   }
 }

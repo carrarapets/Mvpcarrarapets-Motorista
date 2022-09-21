@@ -5,6 +5,10 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 app.use(router);
+app.get("/", (req, res) => {
+    return res.json("hello word");
+
+});
 app.use((err: Error, req: Request, res: Response, next: NextFunction)=>{
     if(err instanceof Error){
         return res.status(400).json({
