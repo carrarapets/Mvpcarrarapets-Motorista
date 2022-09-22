@@ -4,13 +4,15 @@ import { CreateMotoristaService } from "../../services/motorista/CreateMotorista
 class CreateMotoristaController{
 
     async handle(req: Request, res:Response){
-        const{nome, sobrenome, cpf, email, password, cnh, foto}= req.body;
+        const{nome,sobrenome, email,password, cpf, CNH,
+            foto, ant_criminal, avaliacao, validade_cnh, detalhes_corridas,
+            celular, valido}= req.body;
 
 
         const createMotoristaService = new CreateMotoristaService();
 
         const motorista =  await createMotoristaService.execute({
-        nome,sobrenome,cpf,email, password,foto,cnh
+            nome, sobrenome, email, password, CNH,foto, ant_criminal, avaliacao, validade_cnh, detalhes_corridas, celular, valido
         });
         return res.json(motorista)
     }

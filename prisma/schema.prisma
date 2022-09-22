@@ -70,7 +70,7 @@ model Pedido {
 
 model Motorista {
   id                Int       @id @default(autoincrement())
-  create_date       DateTime  @default(now())
+  create_date       DateTime @default(now())
   CNH               String?   @unique
   email             String    @unique
   nome              String?
@@ -81,7 +81,7 @@ model Motorista {
   ant_criminal      String?
   celular           String?
   avaliacao         String?
-  validade_cnh      DateTime  @unique
+  validade_cnh      String?
   detalhes_corridas String?
   pedidos           Pedido[]
   carro             Carro[]
