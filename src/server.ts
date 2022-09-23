@@ -3,7 +3,6 @@ import cors from 'cors';
 import { router } from './routes/routes';
 
 const app = express();
-const err = new Error('invalid');
 app.use(cors())
 app.use(express.json())
 app.use(router);
