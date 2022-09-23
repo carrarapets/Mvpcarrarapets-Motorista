@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tsc src/server.ts && tsnd src/server.ts",
-    "start": "npx tsc src/server.ts && tsnd src/server.ts",
+    "dev": "tsnd src/server.ts",
+    "start": "tsnd src/server.ts",
     "build": "tsc"
     
   },
