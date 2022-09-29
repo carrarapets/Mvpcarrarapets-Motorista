@@ -1,7 +1,9 @@
 import express, {Request, Response, NextFunction} from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
 import { router } from './routes/routes';
 const app = express();
+dotenv.config();
 app.use(cors())
 app.use(express.json())
 app.use(router);
@@ -21,4 +23,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction)=>{
     })
 })
 
-app.listen(3334, ()=> console.log("servidor online"))
+const port = process.env.PORT || 3334;
+app.listen(port, ()=> console.log("Server up in "+port));
